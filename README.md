@@ -2,7 +2,7 @@
 
 Projeto simulador de ecommerce. 
 
-## Pré requisitos
+## Pré-requisitos
 
 Deve existir dois perfis de usuários (ADMINISTRADOR E CLIENTE [PF e PJ] )
 
