@@ -1,7 +1,7 @@
-package LogicaDeProgramacao.Mod2Projeto.Usuario;
+package src.Usuario;
 
-import LogicaDeProgramacao.Mod2Projeto.Produtos.Dados;
-import LogicaDeProgramacao.Mod2Projeto.Produtos.Produto;
+import src.Produtos.Dados;
+import src.Produtos.Produto;
 
 public class Cliente {
     private String nome;
@@ -76,6 +76,7 @@ public class Cliente {
         Dados.produtos.sort((p1, p2) -> p1.getNome().compareTo(p2.getNome()));
 
         for (Produto p : Dados.produtos) {
+            System.out.println("ID: " + p.getId());
             System.out.println("Nome: " + p.getNome());
             System.out.println("Preço: " + p.getPreco());
             System.out.println("Categoria: " + p.getCategoria());
