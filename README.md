@@ -1,18 +1,31 @@
-## Getting Started
+## Projeto
 
-Welcome to the VS Code Java world. Here is a guideline to help you get started to write Java code in Visual Studio Code.
+Projeto simulador de ecommerce. 
 
-## Folder Structure
+## Pré requisitos
 
-The workspace contains two folders by default, where:
+Deve existir dois perfis de usuários (ADMINISTRADOR E CLIENTE [PF e PJ] )
 
-- `src`: the folder to maintain sources
-- `lib`: the folder to maintain dependencies
+Deverá ser desenvolvido as seguintes funcionalidades para o ADMINISTRADOR do sistema
 
-Meanwhile, the compiled output files will be generated in the `bin` folder by default.
+1 - Cadastrar produto - Os produtos devem possuir os seguintes atributos: nome, preco, categoria, marca - Incluir produtos das seguintes categorias: LIVRO, INFORMATICA, MERCADO (Adicionar atributos / comportamentos especificos para cada categoria)
 
-> If you want to customize the folder structure, open `.vscode/settings.json` and update the related settings there.
+2 - Visualizar lista de produtos
 
-## Dependency Management
+3 - Editar produto
 
-The `JAVA PROJECTS` view allows you to manage your dependencies. More details can be found [here](https://github.com/microsoft/vscode-java-dependency#manage-dependencies).
+4 - Remover produto
+
+Deverá ser desenvolvido as seguintes funcionalidades para o CLIENTE do sistema
+PRODUTOS
+
+1 - Visualizar lista de produtos
+
+2 - Filtrar por categoria
+
+3 - Filtrar por marca
+
+4 - Ordenar por nome (ordem crescente e decrescente)
+
+5 - Ordernar por preço (ordem crescente e decrescente)
+
