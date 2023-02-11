@@ -13,4 +13,10 @@ public class Dados {
 
     public static List<Usuario> usuarios = new ArrayList<>();
 
+    public static void visualizarProdutos() {
+        for (Produto produto : produtos) {
+            produto.visualizar();
+        }
+    }
+
 }

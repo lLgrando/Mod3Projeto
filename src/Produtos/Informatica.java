@@ -15,4 +15,10 @@ public class Informatica extends Produto {
         return garantia;
     }
 
+    @Override
+    public void visualizar() {
+        super.visualizar();
+        System.out.println("Garantia: " + this.garantia);
+    }
+
 }

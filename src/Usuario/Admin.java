@@ -10,7 +10,7 @@ public class Admin {
     }
 
     public void visualizarProdutos() {
-        Produto.visualizarProdutos();
+        Dados.visualizarProdutos();
     }
 
     public void editarProduto(Produto produto) {

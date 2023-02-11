@@ -13,6 +13,12 @@ public class Mercado extends Produto {
 
     public boolean isPerecivel() {
         return perecivel;
-    }  
+    }
+
+    @Override
+    public void visualizar() {
+        super.visualizar();
+        System.out.println("Percivel: " + (this.perecivel ? "SIM" : "NÃO"));
+    }
 
 }
