@@ -21,4 +21,11 @@ public class Livro extends Produto {
         return paginas;
     }
 
+    @Override
+    public void visualizar() {
+        super.visualizar();
+        System.out.println("Autor: " + this.autor);
+        System.out.println("Paginas: " + this.paginas);
+    }
+
 }
