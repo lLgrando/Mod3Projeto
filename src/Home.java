@@ -1,19 +1,19 @@
-package src;
+import pagamentos.EnumPagamentos;
+import produtos.Informatica;
+import produtos.Livro;
+import produtos.Mercado;
+import usuario.Admin;
+import usuario.ClientePF;
+import usuario.ClientePJ;
 
-import src.Produtos.Informatica;
-import src.Produtos.Livro;
-import src.Produtos.Mercado;
-import src.Usuario.Admin;
-import src.Usuario.Cliente;
-
-public class Home extends MyFrame {
+public class Home {
 
     public static void main(String[] args) {
-       //  new MyFrame();
-       //  new MyFrameUsuario();
 
-        Admin a1 = new Admin();
-        Cliente c1 = new Cliente("Leonardo", "Algo", "123");
+        Admin a1 = new Admin("LeoAdmin");
+        ClientePF pf = new ClientePF("Leonardo", "Algo", "123");
+        ClientePJ pj = new ClientePJ("Empresa ABC", "456798");
+        ClientePJ pj2 = new ClientePJ("Empresa XYZ", "1472855");
 
         Livro cronicasDeNarnia = new Livro(
                 "As Crônicas de Narnia",
@@ -38,10 +38,17 @@ public class Home extends MyFrame {
                 "ABC",
                 false);
 
-        Informatica mouse = new Informatica(
-                "Mouse",
-                60,
+        Informatica monitor = new Informatica(
+                "Monitor",
+                1600,
                 "Periférico",
+                "LG",
+                1);
+
+        Informatica notebook = new Informatica(
+                "Notebook",
+                4000,
+                "Notebook",
                 "Dell",
                 1);
 
@@ -53,17 +60,29 @@ public class Home extends MyFrame {
                 "Robert C. Martin",
                 425);
 
-                
         a1.cadastrarProduto(cronicasDeNarnia);
         a1.cadastrarProduto(teclado);
         a1.cadastrarProduto(arroz);
-        a1.cadastrarProduto(mouse);
+        a1.cadastrarProduto(monitor);
+        a1.cadastrarProduto(notebook);
         a1.cadastrarProduto(codigoLimpo);
 
-        a1.removerProduto(arroz);
-        a1.visualizarProdutos();
-        c1.ordenarPorPreco();
-        c1.ordenarPorNome();
+        // a1.removerProduto(arroz);
+        // a1.visualizarProdutos();
+        // c1.ordenarPorPrecoMaiorMenor();
+        // c1.ordenarPorPrecoMenorMaior();
+        // c1.ordenarPorNomeMaiorMenor();
+        // c1.ordenarPorNomeMenorMaior();
+
+        pf.adicionarAoCarrinho(new String[] { "Código Limpo" });
+        pj.adicionarAoCarrinho(new String[] { "As Crônicas de Narnia", "Teclado", "Arroz", "Arroz" });
+        pj2.adicionarAoCarrinho(new String[] { "Notebook" });
+
+        pf.pagar(EnumPagamentos.FATURAMENTO); // erro - faturamento apenas para PJ
+        pj.pagar(EnumPagamentos.FATURAMENTO);
+        pj2.pagar(EnumPagamentos.PIX); // erro - valor máximo do pix é 1k
+        pj2.pagar(EnumPagamentos.CARTAO); // erro - valor máximo para cartão é 2k
+        pj2.pagar(EnumPagamentos.BOLETO);
 
     }
 }
